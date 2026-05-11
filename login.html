@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🔐 تسجيل الدخول</h2>
+
+    <input id="name" placeholder="اسم الطالب">
+    <button onclick="login()">دخول</button>
+
+  </div>
+
+</div>
+
+<script src="storage.js"></script>
+
+<script>
+function login() {
+  const name = document.getElementById("name").value;
+  if (!name) return alert("اكتب اسمك");
+
+  setUser({
+    name,
+    plan: "free",
+    used: 0,
+    limit: 5
+  });
+
+  window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>
