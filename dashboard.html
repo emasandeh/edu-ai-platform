@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة الطالب</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>📊 لوحة الطالب</h1>
+  <a href="index.html">العودة</a>
+</header>
+
+<main class="container">
+
+  <div class="card">
+    <h2>👤 معلوماتك</h2>
+    <p id="userInfo"></p>
+  </div>
+
+  <div class="card">
+    <h2>📈 التقدم</h2>
+    <p>رياضيات: 60%</p>
+    <p>فيزياء: 45%</p>
+  </div>
+
+</main>
+
+<script src="storage.js"></script>
+
+<script>
+const user = getUser();
+
+document.getElementById("userInfo").innerText =
+  `الاسم: ${user.name} | الخطة: ${user.plan}`;
+</script>
+
+</body>
+</html>
